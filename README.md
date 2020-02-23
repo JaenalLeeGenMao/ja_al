@@ -1,4 +1,5 @@
 # [Web Components](https://www.webcomponents.org/) project starter using ES6 and [Webpack](https://webpack.github.io/)
+
 [![Build Status](https://travis-ci.org/vardius/web-components-webpack-es6-boilerplate.svg?branch=master)](https://travis-ci.org/vardius/web-components-webpack-es6-boilerplate)
 [![codecov](https://codecov.io/gh/vardius/web-components-webpack-es6-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/vardius/web-components-webpack-es6-boilerplate)
 [![license](https://img.shields.io/github/license/vardius/web-components-webpack-es6-boilerplate.svg)](LICENSE.txt)
@@ -27,15 +28,16 @@ $ npm install
 
 ## Development
 
-* Build once for (ready for ***Production***):
-  * `$ npm run build`
-  * `$ npm run build:serve`
+- Build once for (ready for **_Production_**):
+
+  - `$ npm run build`
+  - `$ npm run build:serve`
 
   The last command will boot up HTTP server on `3003` port and serve `build/client` directory in a default browser
 
-* Hot reloading via webpack middlewares:
-  * `$ npm start`
-  * Point your browser to http://localhost:3000/, page hot reloads automatically when there are changes
+- Hot reloading via webpack middlewares:
+  - `$ npm start`
+  - Point your browser to http://localhost:3000/, page hot reloads automatically when there are changes
 
 ## Testing
 
@@ -61,7 +63,7 @@ $ npm start
 $ npm run tunnel # run in a new tab
 ```
 
-You will receive a url, for example `https://tbst.localtunnel.me`, that you can share with anyone for as long as your local instance of `lt` remains active. Any requests will be routed to your local service at the specified port.
+You will receive a url, for example `https://tbst.localtunnel.me`, that you can share with anyone for as long as your local instance of `lt --port 3000` remains active. Any requests will be routed to your local service at the specified port. incase localtunnel failed please use `lt -h http://serverless.social -p 3000`
 
 ## License
 

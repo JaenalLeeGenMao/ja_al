@@ -43,7 +43,19 @@ export default class About extends HTMLElement {
         } catch (e) {
           // do nothing
         }
-        $("custom-header").attr(inputRef.name, inputRef.value);
+
+        if (inputRef.name === "name") {
+          const fullname = inputRef.value.split(" ");
+
+          if (fullname.length > 0) {
+            $("custom-header").attr("lname", fullname.slice(1).join(" "));
+            $("custom-header").attr("fname", fullname[0]);
+          } else {
+            $("custom-header").attr("fname", fullname[0]);
+          }
+        } else {
+          $("custom-header").attr(inputRef.name, inputRef.value);
+        }
       });
 
       this._content = `
@@ -56,7 +68,7 @@ export default class About extends HTMLElement {
           <div id="tooltip" class="hide">
             <div class="tooltip__arrow_left" />
             <div>
-              <custom-input name="location" value="${headerRef.fname} ${headerRef.lname}" />
+              <custom-input name="name" value="${headerRef.fname} ${headerRef.lname}" />
             </div>
             <div>
               <button id="cancel">CANCEL</button>
@@ -146,7 +158,7 @@ export default class About extends HTMLElement {
             <div id="tooltip" class="hide">
               <div class="tooltip__arrow_left" />
               <div>
-                <custom-input name="location" value="${headerRef.fname} ${headerRef.lname}" />
+                <custom-input name="name" value="${headerRef.fname} ${headerRef.lname}" />
               </div>
               <div>
                 <button id="cancel">CANCEL</button>
@@ -259,7 +271,7 @@ export default class About extends HTMLElement {
       $("#about").html(`${this._content}`);
     });
 
-    window.addEventListener("DOMSubtreeModified", () => {
+    const desktopEditButtonListener = () => {
       /** add click event to each edit button */
       const editButtons = document.querySelectorAll("#edit");
       for (let k = 0; k < editButtons.length; k++) {
@@ -288,6 +300,12 @@ export default class About extends HTMLElement {
           $(currentTooltip).removeClass("hide");
         });
       }
+    };
+
+    window.addEventListener("load", () => {
+      if (window.innerWidth > 720) {
+        window.addEventListener("click", desktopEditButtonListener);
+      }
     });
 
     window.addEventListener("resize", e => {
@@ -296,9 +314,13 @@ export default class About extends HTMLElement {
         $(editButton).removeClass("hide");
         $(saveButton).addClass("hide");
         $(cancelButton).addClass("hide");
+
+        window.removeEventListener("click", desktopEditButtonListener);
+      } else {
+        window.addEventListener("click", desktopEditButtonListener);
+        /** as long as user resize, send default content */
+        $("#about").html(`${this._content}`);
       }
-      /** as long as user resize, send default content */
-      $("#about").html(`${this._content}`);
     });
 
     /** initialized content */

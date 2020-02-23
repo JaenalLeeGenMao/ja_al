@@ -17,7 +17,7 @@
     "test:cov": "yarn test -- --coverage",
     "test:watch": "yarn test -- --watch",
     "lint": "eslint config src/** --ext .js",
-    "tunnel": "lt --port 3000"
+    "tunnel": "lt -h http://serverless.social -p 3000"
   },
   "author": {
     "name": "Rafał Lorenz",
