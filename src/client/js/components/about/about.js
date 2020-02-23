@@ -132,7 +132,7 @@ export default class About extends HTMLElement {
     const headerRef = _get($("custom-header"), "[0]", "");
     const profile = _get(headerRef, "attributes", "");
 
-    const editButton = $("#edit")[0];
+    const editButton = $("#user_edit")[0];
     const saveButton = $("#save")[0];
     const cancelButton = $("#cancel")[0];
 
