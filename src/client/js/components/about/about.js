@@ -311,13 +311,14 @@ export default class About extends HTMLElement {
     window.addEventListener("resize", e => {
       /** set the edit button to default position */
       if (e.currentTarget.innerWidth < 720) {
+        window.removeEventListener("click", desktopEditButtonListener);
+      } else {
         $(editButton).removeClass("hide");
         $(saveButton).addClass("hide");
         $(cancelButton).addClass("hide");
 
-        window.removeEventListener("click", desktopEditButtonListener);
-      } else {
         window.addEventListener("click", desktopEditButtonListener);
+
         /** as long as user resize, send default content */
         $("#about").html(`${this._content}`);
       }
