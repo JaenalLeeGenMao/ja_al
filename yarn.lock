@@ -3378,6 +3378,21 @@ jest@^20.0.4:
   dependencies:
     jest-cli "^20.0.4"
 
+jquery-ui-dist@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui-dist/-/jquery-ui-dist-1.12.1.tgz#5c0815d3cc6f90ff5faaf5b268a6e23b4ca904fa"
+
+"jquery-ui@github:jquery/jquery-ui":
+  version "1.12.2-pre"
+  uid "0c860b0d92f9959f6747f8c02e9671eb2fc561aa"
+  resolved "https://codeload.github.com/jquery/jquery-ui/tar.gz/0c860b0d92f9959f6747f8c02e9671eb2fc561aa"
+  dependencies:
+    jquery ">=1.7.0 <4.0.0"
+
+"jquery@>=1.7.0 <4.0.0":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+
 jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
@@ -5320,8 +5335,8 @@ string_decoder@~1.0.0:
     safe-buffer "^5.0.1"
 
 stringstream@~0.0.4:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/stringstream/-/stringstream-0.0.5.tgz#4e484cd4de5a0bbbee18e46307710a8a81621878"
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/stringstream/-/stringstream-0.0.6.tgz#7880225b0d4ad10e30927d167a1d6f2fd3b33a72"
 
 strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   version "3.0.1"
