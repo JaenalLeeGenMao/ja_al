@@ -1843,8 +1843,8 @@ detect-indent@^4.0.0:
     repeating "^2.0.0"
 
 diff@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.2.0.tgz#c9ce393a4b7cbd0b058a725c93df299027868ff9"
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
 
 diffie-hellman@^5.0.0:
   version "5.0.2"
@@ -3377,6 +3377,21 @@ jest@^20.0.4:
   resolved "https://registry.yarnpkg.com/jest/-/jest-20.0.4.tgz#3dd260c2989d6dad678b1e9cc4d91944f6d602ac"
   dependencies:
     jest-cli "^20.0.4"
+
+jquery-ui-dist@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui-dist/-/jquery-ui-dist-1.12.1.tgz#5c0815d3cc6f90ff5faaf5b268a6e23b4ca904fa"
+
+"jquery-ui@github:jquery/jquery-ui":
+  version "1.12.2-pre"
+  uid "0c860b0d92f9959f6747f8c02e9671eb2fc561aa"
+  resolved "https://codeload.github.com/jquery/jquery-ui/tar.gz/0c860b0d92f9959f6747f8c02e9671eb2fc561aa"
+  dependencies:
+    jquery ">=1.7.0 <4.0.0"
+
+"jquery@>=1.7.0 <4.0.0":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
 
 jquery@^3.2.1:
   version "3.2.1"
