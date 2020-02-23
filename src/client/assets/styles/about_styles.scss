@@ -1,0 +1,138 @@
+@import "variables";
+
+.about__wrapper {
+  position: relative;
+
+  #about {
+    max-width: 28rem;
+  }
+
+  .about__sidemenu {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: -2.8rem;
+
+    svg {
+      display: block;
+    }
+
+    svg.hide {
+      display: none;
+    }
+
+    svg:hover {
+      cursor: pointer;
+    }
+
+    button {
+      display: block;
+      color: $primary;
+      border: none;
+      background: transparent;
+    }
+
+    button.hide {
+      display: none;
+    }
+  }
+
+  .about__form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    background: transparent;
+
+    #edit {
+      display: none;
+      position: relative;
+    }
+
+    #tooltip {
+      display: block;
+      position: absolute;
+      width: 24rem;
+      padding: 0rem 1.5rem 1rem 1.5rem;
+      top: -3rem;
+      left: 5rem;
+      background: white;
+      box-shadow: 0 0 1rem 0.5rem $light;
+
+      .tooltip__arrow_left {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        left: -1rem;
+        transform: rotate(45deg);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 0;
+        background: white;
+      }
+
+      button {
+        border: 0.15rem solid $primary;
+        border-radius: 0.3rem;
+        font-weight: 600;
+        color: $primary;
+        background: rgba(0, 0, 0, 0);
+      }
+
+      button:hover {
+        font-weight: 500;
+        color: white !important;
+        background: $primary !important;
+      }
+    }
+
+    #tooltip.hide {
+      display: none;
+    }
+
+    > div {
+      display: flex;
+    }
+
+    p {
+      padding: 0 0.5rem;
+      margin: 0;
+    }
+
+    h4 {
+      padding-right: 1rem;
+    }
+
+    svg:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .about__wrapper {
+    .about__sidemenu {
+      svg,
+      svg.hide,
+      button,
+      button.hide {
+        display: none;
+      }
+    }
+
+    .about__form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: $bg;
+      padding: 0.5rem;
+
+      #edit {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,288 @@
+@import "variables";
+
+.header__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logout logout logout"
+    "thumbnail thumbnail thumbnail"
+    "thumbnail thumbnail thumbnail"
+    "info info info"
+    "star star star"
+    "review review review"
+    "follower follower follower"
+    "navigate navigate navigate";
+  max-width: 1280px;
+  margin: 0;
+  background: transparent;
+}
+
+.header__grid_logout {
+  grid-area: logout;
+  text-align: right;
+  padding: 3.5rem 2.5rem 1.5rem 2.5rem;
+
+  button {
+    font-weight: 600;
+    color: $primary;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.header__grid_thumbnail {
+  grid-area: thumbnail;
+  padding: 0.5rem 2.5rem;
+
+  .profile_wrapper {
+    width: 15rem;
+    height: 15rem;
+    box-shadow: 0 0 1rem 0.1rem $light;
+    overflow: hidden;
+    margin: auto;
+  }
+}
+
+.header__grid_info {
+  grid-area: info;
+  padding: 0.5rem 2.5rem;
+
+  #profile_name {
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    color: $dark;
+    line-height: 1.4;
+  }
+
+  #profile_location {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: $grey;
+
+    p {
+      margin: 0 0.5rem;
+    }
+  }
+
+  #profile_phone {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: $grey;
+
+    p {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.header__grid_star {
+  grid-area: star;
+  padding: 0 2.5rem;
+  text-align: left;
+
+  #profile_rating {
+    display: inline-block;
+  }
+}
+
+.header__grid_review {
+  grid-area: review;
+  color: $grey;
+  padding: 0.5rem 2.85rem;
+
+  #profile_review {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.4;
+
+    p {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.header__grid_follower {
+  grid-area: follower;
+  display: inline-block;
+  color: $grey;
+  padding: 2rem;
+
+  #profile_follower {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.4;
+
+    svg:hover {
+      cursor: pointer;
+
+      path {
+        fill: $darker;
+      }
+    }
+
+    p {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.header__grid_navigate {
+  grid-area: navigate;
+  display: inline-block;
+  padding: 0;
+}
+
+.header__overlay {
+  display: none;
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  height: 0.1rem;
+  z-index: 1;
+  background: $light;
+}
+
+.header__uploader {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  button {
+    background: transparent;
+    border-radius: 0.3rem;
+    border: 0.1rem solid $light;
+    color: $light;
+    padding: 0.5rem 1rem;
+    margin: auto;
+
+    svg {
+      vertical-align: middle;
+
+      path,
+      circle {
+        fill: $light;
+      }
+    }
+  }
+
+  button:hover {
+    border: 0.1rem solid $grey;
+    color: $grey;
+
+    svg {
+      path,
+      circle {
+        fill: $grey;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .header__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "logout logout logout logout logout"
+      "thumbnail info info star review"
+      "thumbnail info info star review"
+      "thumbnail info info star review"
+      "thumbnail navigate navigate follower follower";
+    margin: 5rem auto;
+    background: white;
+  }
+
+  .header__grid_logout {
+    padding: 1.5rem 2.5rem 1rem 2.5rem;
+
+    button {
+      border: 0.15rem solid $primary;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      color: $primary;
+      background: rgba(0, 0, 0, 0);
+    }
+
+    button:hover {
+      font-weight: 500;
+      color: white !important;
+      background: $primary !important;
+    }
+  }
+
+  .header__grid_thumbnail {
+    padding: 2.5rem;
+    z-index: 1;
+  }
+
+  .header__grid_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    #profile_name {
+      text-align: left;
+    }
+  }
+
+  .header__grid_star {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    padding: 0;
+  }
+
+  .header__grid_follower {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__grid_review {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+
+    #profile_review {
+      display: inline-block;
+    }
+  }
+
+  .header__grid_navigate {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 1rem;
+  }
+
+  .header__overlay {
+    display: block;
+  }
+
+  .header__uploader {
+    display: flex;
+  }
+}

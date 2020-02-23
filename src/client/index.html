@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JA AL</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" />
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Serverless chat application using peer to peer WebRTC">
-  <meta name="keywords" content="HTML, HTML5, CSS, CSS3, XML, XHTML, JavaScript, EcmaScript, EcmaScript6, Rafał, Lorenz, WebRTC, real, time, communication">
-  <meta name="author" content="Rafał Lorenz">
-  <meta name="copyright" content="Rafał Lorenz" />
-  <title>WebRTC Chat</title>
-  <link rel="shortcut icon" href="/images/favicon.ico">
+    <% for (var css in htmlWebpackPlugin.files.chunks['application'].css) { %>
+    <link
+      href="<%= htmlWebpackPlugin.files.chunks['application'].css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %>
+  </head>
 
-  <% for (var css in htmlWebpackPlugin.files.chunks['application'].css) { %>
-    <link href="<%= htmlWebpackPlugin.files.chunks['application'].css[css] %>" rel="stylesheet">
-  <% } %>
-</head>
+  <body>
+    <!-- <hello-world who="Unicorn"></hello-world> -->
+    <custom-header
+      fname="John"
+      lname="Doe"
+      location="California, CA"
+      phone="(0655)12345678"
+      site="https://www.example.com"
+      review="2401"
+      follower="199923"
+      rating="3.5"
+    ></custom-header>
+    <custom-content></custom-content>
 
-<body>
-  <hello-world who="Unicorn"></hello-world>
-
-  <script src="<%= htmlWebpackPlugin.files.chunks['vendor'].entry %>"></script>
-  <script src="<%= htmlWebpackPlugin.files.chunks['application'].entry %>"></script>
-</body>
-
+    <script src="<%= htmlWebpackPlugin.files.chunks['vendor'].entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks['application'].entry %>"></script>
+  </body>
 </html>

@@ -1,0 +1,46 @@
+<div class="header__grid">
+  <div class="header__overlay"></div>
+  <div class="header__uploader">
+    <button>
+      <svg
+        id="camera"
+        class="ionicon"
+        viewBox="0 0 512 512"
+        width="3rem"
+        height="3rem"
+      >
+        <circle cx="256" cy="272" r="64"></circle>
+        <path
+          d="M432 144h-59c-3 0-6.72-1.94-9.62-5l-25.94-40.94a15.52 15.52 0 00-1.37-1.85C327.11 85.76 315 80 302 80h-92c-13 0-25.11 5.76-34.07 16.21a15.52 15.52 0 00-1.37 1.85l-25.94 41c-2.22 2.42-5.34 5-8.62 5v-8a16 16 0 00-16-16h-24a16 16 0 00-16 16v8h-4a48.05 48.05 0 00-48 48V384a48.05 48.05 0 0048 48h352a48.05 48.05 0 0048-48V192a48.05 48.05 0 00-48-48zM256 368a96 96 0 1196-96 96.11 96.11 0 01-96 96z"
+        ></path>
+      </svg>
+      Upload Cover Image
+    </button>
+  </div>
+  <div class="header__grid_logout">
+    <button>LOG OUT</button>
+  </div>
+  <div class="header__grid_thumbnail">
+    <div class="profile_wrapper">
+      <img
+        alt="thumbnail"
+        src="https://timcarli-ecommerce-live.s3.us-west-2.amazonaws.com/productvariants/32/88a5b0991fcb898450da1cd0f0cea5af.jpg"
+      />
+    </div>
+  </div>
+  <div class="header__grid_info">
+    <div id="profile_name"></div>
+    <div id="profile_phone"></div>
+    <div id="profile_location"></div>
+  </div>
+  <div class="header__grid_star">
+    <custom-rating id="profile_rating" />
+  </div>
+  <div class="header__grid_review"><span id="profile_review" /></div>
+  <div class="header__grid_follower">
+    <span id="profile_follower" />
+  </div>
+  <div class="header__grid_navigate">
+    <custom-navigate routes="about,settings,option1,option2,option3" />
+  </div>
+</div>

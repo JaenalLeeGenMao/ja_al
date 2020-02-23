@@ -1,0 +1,26 @@
+@import "variables";
+
+.input__wrapper {
+  margin: 1rem 0;
+
+  label {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    color: $light;
+    display: block;
+  }
+
+  input {
+    font-size: 1.4rem;
+    padding: 0.25rem 0;
+    width: 100%;
+    border: none;
+    border-bottom: 0.1rem solid $light;
+  }
+
+  input:focus {
+    border-bottom: 0.1rem solid $primary;
+  }
+}
